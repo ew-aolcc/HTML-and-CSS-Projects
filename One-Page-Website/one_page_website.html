@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Website</title>
+</head>
+<body>
+
+<!--HEADER-->
+<header>
+    <h1>Welcome to My One Page Website</h1>
+
+    <!--NAVBAR-->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pictures">Pictures</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#footer">Footer</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--MAIN-->
+<main>
+    <section id="home">
+        <h2>Home</h2>
+        <p>
+            This is a simple one page website that demonstrates basic HTML elements,
+            including headings, paragraphs, images, forms, videos, navigation links,
+            and semantic HTML structure.
+        </p>
+        <p>
+            Use the navigation menu above to jump to different sections of the page.
+        </p>
+    </section>
+
+    <section id="pictures">
+        <h2>Picture Gallery</h2>
+        <p>Below are sample images using the img tag.</p>
+
+        <img src="https://picsum.photos/300/200?random=1" alt="Random landscape image 1">
+        <img src="https://picsum.photos/300/200?random=2" alt="Random landscape image 2">
+        <img src="https://picsum.photos/300/200?random=3" alt="Random landscape image 3">
+    </section>
+
+    <section id="contact">
+        <h2>Contact Form</h2>
+        <p>Fill out the form below to contact us.</p>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <br><br>
+
+            <label for="message">Message:</label>
+            <br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here"></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="videos">
+        <h2>Video Section</h2>
+        <p>Here is an embedded video using an iframe.</p>
+
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Embedded YouTube video"
+                allowfullscreen>
+        </iframe>
+    </section>
+</main>
+
+<!--FOOTER-->
+<footer id="footer">
+    <p>&copy; 2026 My One Page Website. All rights reserved.</p>
+    <p><a href="#home">Back to top</a></p>
+</footer>
+
+</body>
+</html>
