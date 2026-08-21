@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Effecting Images wiht CSS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="drop">
+                <a href="#" class="dropdown-button">Images</a>
+                <div class="submenu">
+                    <a href="#image1">Image 1</a>
+                    <a href="#image2">Image 2</a>
+                    <a href="#image3">Image 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div>
+        <br>
+        <div class="image-contianer" id="image1">
+            <img src="images/japan-one.jpg" alt="Japan">
+            <div class="overlay"></div>
+        </div>
+        <br>
+        <div class="image-contianer" id="image2">
+            <img src="images/japan-two.jpg" class="zoom" alt="Japan zoom">
+        </div>
+        <div class="image-contianer" id="image3">
+            <div class="circle">
+                <img src="images/japan-three.jpg" alt="Japan circle">
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-text">
+        <p>The Tech Academy &copy;</p>
+    </div>
+</footer>
+</body>
+
+</html>
