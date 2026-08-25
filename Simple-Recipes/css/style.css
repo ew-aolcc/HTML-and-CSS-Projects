@@ -109,6 +109,37 @@ p {
 }
 
 
+/*BODY*/
+.container {
+    display: inline-block;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+h1#title {
+    font-family: 'Sacramento', cursive;
+    font-size: 80px;
+    color: rgb(0, 80, 67);
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+/*Styling for screens 1200px or smaller*/
+@media screen and (max-width: 1200px) {
+    .column {
+        width: 100%;
+        padding: 0px;
+        margin-left: -15px;
+    }
+}
+
+
 #about {
     padding-top: 60px;
     padding-bottom: 60px;

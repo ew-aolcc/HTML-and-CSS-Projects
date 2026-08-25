@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Work+Sans:wght@400;500&display=swap');
+
+/*default behaviour*/
+html {
+    scroll-behavior: smooth;
+    --primary-color: #0E0B08;
+    --secondary-color: #D5A05E;
+    --header-color: #C5760D;
+    --body-color: #413326;
+    --accent-color: #E72938;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: var(--body-color);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/*header styling*/
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/*Body styling*/
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+main > h1 {
+    margin: 2.5rem 0 0;
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 32px;
+}
+
+main > .tagline {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #d9c9a8;
+}
+
+section h2 {
+    color: var(--header-color);
+}
+
+/*reusable class using the the grid for more modern layout*/
+.beer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.beer-card {
+    background-color: #fffaf0;
+    border: 1px solid #d9c9a8;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.beer-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.beer-card h3,
+.beer-card p {
+    margin: 0.5rem 1rem;
+}
+
+.beer-card h3 {
+    margin-top: 0.75rem;
+}
+
+.beer-card p:last-child {
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 30rem;
+    background-color: #fffaf0;
+    border: 1px solid #d9c9a8;
+    border-radius: 6px;
+    padding: 1.5rem;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+    margin-right: auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #c9b89a;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: var(--body-color);
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--header-color);
+    outline-offset: 1px;
+}
+
+form input[type="submit"] {
+    width: auto;
+    background-color: var(--header-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+iframe {
+    max-width: 100%;
+    border: 3px solid var(--primary-color);
+}
+
+/*footer styling*/
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer a {
+    color: var(--header-color);
+}
