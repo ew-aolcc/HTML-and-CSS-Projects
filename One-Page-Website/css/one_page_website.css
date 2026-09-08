@@ -103,6 +103,130 @@ section h2 {
     display: block;
 }
 
+.lightbox-trigger {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox-trigger:hover {
+    opacity: 0.85;
+}
+
+/*Lightbox modal*/
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    background-color: rgba(14, 11, 8, 0.95);
+}
+
+.lightbox-modal.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+}
+
+.lightbox-slide {
+    display: none;
+    text-align: center;
+}
+
+.lightbox-slide img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.lightbox-number_text {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+}
+
+.lightbox-caption {
+    color: #ffffff;
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    margin: 0.75rem 0 0;
+}
+
+.lightbox-close {
+    cursor: pointer;
+    color: var(--secondary-color);
+    position: absolute;
+    top: 10px;
+    right: 25%;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+.lightbox-close:hover {
+    color: #ffffff;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    padding: 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.lightbox-prev {
+    left: -1rem;
+}
+
+.lightbox-next {
+    right: -1rem;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: var(--header-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.lightbox-fade {
+    animation: lightboxFade 0.4s;
+}
+
+@keyframes lightboxFade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .lightbox-prev,
+    .lightbox-next {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .lightbox-close {
+        top: 0.5rem;
+        right: 1rem;
+    }
+}
+
 .beer-card h3,
 .beer-card p {
     margin: 0.5rem 1rem;

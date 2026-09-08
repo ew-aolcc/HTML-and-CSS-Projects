@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="description" content="Ember & Oak Brewing Co. — a small-batch craft brewery and taproom">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ember &amp; Oak Brewing Co.</title>
     <link rel="stylesheet" href="css/one_page_website.css">
+    <script src="JS/one_page_website.js" defer></script>
+    <title>Ember &amp; Oak Brewing Co.</title>
 </head>
 <body>
 
@@ -35,31 +36,71 @@
 
         <div class="beer-grid">
             <div class="beer-card">
-                <img src="https://loremflickr.com/400/300/brewery?random=11" alt="Brewery photo">
+                <img src="https://loremflickr.com/400/300/brewery?random=11" alt="Brewery photo"
+                     class="lightbox-trigger" onclick="openModal();currentSlide(1)">
                 <h3>Foothill Pale Ale</h3>
                 <p>American Pale Ale &middot; 5.4% ABV</p>
                 <p>Bright citrus hops over a crisp malt backbone.</p>
             </div>
 
             <div class="beer-card">
-                <img src="https://loremflickr.com/400/300/brewery?random=12" alt="Brewery photo">
+                <img src="https://loremflickr.com/400/300/brewery?random=12" alt="Brewery photo"
+                     class="lightbox-trigger" onclick="openModal();currentSlide(2)">
                 <h3>Copper Kettle Amber</h3>
                 <p>Amber Ale &middot; 5.8% ABV</p>
                 <p>Toffee and caramel malt, balanced with a whisper of hops.</p>
             </div>
 
             <div class="beer-card">
-                <img src="https://loremflickr.com/400/300/brewery?random=13" alt="Brewery photo">
+                <img src="https://loremflickr.com/400/300/brewery?random=13" alt="Brewery photo"
+                     class="lightbox-trigger" onclick="openModal();currentSlide(3)">
                 <h3>Midnight Oak Stout</h3>
                 <p>Oatmeal Stout &middot; 6.2% ABV</p>
                 <p>Roasted cacao and espresso, finished smooth on oats.</p>
             </div>
 
             <div class="beer-card">
-                <img src="https://loremflickr.com/400/300/brewery?random=14" alt="Brewery photo">
+                <img src="https://loremflickr.com/400/300/brewery?random=14" alt="Brewery photo"
+                     class="lightbox-trigger" onclick="openModal();currentSlide(4)">
                 <h3>Ridge Line Lager</h3>
                 <p>Helles Lager &middot; 4.7% ABV</p>
                 <p>Clean, bready, and built for a second round.</p>
+            </div>
+        </div>
+
+        <!--Lightbox Modal-->
+        <div id="lightboxModal" class="lightbox-modal">
+            <span class="lightbox-close" onclick="closeModal()">&times;</span>
+
+            <div class="lightbox-content">
+
+                <div class="lightbox-slide">
+                    <div class="lightbox-number_text">1 / 4</div>
+                    <img src="https://loremflickr.com/800/600/brewery?random=11" alt="Foothill Pale Ale">
+                    <p class="lightbox-caption">Foothill Pale Ale</p>
+                </div>
+
+                <div class="lightbox-slide">
+                    <div class="lightbox-number_text">2 / 4</div>
+                    <img src="https://loremflickr.com/800/600/brewery?random=12" alt="Copper Kettle Amber">
+                    <p class="lightbox-caption">Copper Kettle Amber</p>
+                </div>
+
+                <div class="lightbox-slide">
+                    <div class="lightbox-number_text">3 / 4</div>
+                    <img src="https://loremflickr.com/800/600/brewery?random=13" alt="Midnight Oak Stout">
+                    <p class="lightbox-caption">Midnight Oak Stout</p>
+                </div>
+
+                <div class="lightbox-slide">
+                    <div class="lightbox-number_text">4 / 4</div>
+                    <img src="https://loremflickr.com/800/600/brewery?random=14" alt="Ridge Line Lager">
+                    <p class="lightbox-caption">Ridge Line Lager</p>
+                </div>
+
+                <a class="lightbox-prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="lightbox-next" onclick="plusSlides(1)">&#10095;</a>
+
             </div>
         </div>
     </section>
