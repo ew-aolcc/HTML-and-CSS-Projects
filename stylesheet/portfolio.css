@@ -1,0 +1,613 @@
+/***** GENERAL STYLING *****/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+/* Fade-in on load */
+body.fade-out {
+    opacity: .1;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Optima;
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+    transition: transform 1s;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.white-text {
+    color: #fff;
+    padding-top: 10vh;
+}
+
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    transition: transform 1s;
+    transform: scale(1);
+}
+
+p:hover {
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+a {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+q {
+    font-style: italic;
+}
+
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+}
+
+footer {
+    padding: 2%;
+    background-color: white;
+}
+
+/***** End of General Styling *****/
+
+/***** Navbar Styling *****/
+/* Flex row instead of floated links */
+.Navbar {
+    display: flex;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+.Navbar a {
+    display: block;
+    color: white;
+    padding: .75vw 1vw;
+    text-decoration: none;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+}
+
+.Navbar a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+.Navbar a.active {
+    background-color: darkgray;
+}
+
+/***** End of Navbar Styling *****/
+
+/***** Video Styling *****/
+#Typing_Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+.Video_Text {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2vh;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+/***** End of Video Styling *****/
+
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.mySlides {
+    display: none;
+}
+
+#Slideshow_Container {
+    width: 39.5vw;
+    max-width: 700px;
+    min-width: 260px;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+#Slideshow_Container a {
+    text-decoration: none;
+}
+
+.Slideshow_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: 100%;
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: 1;
+}
+
+.active, .dot:hover {
+    background-color: black;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+
+/***** End Slideshow Styling *****/
+
+/***** Row / Column Styling *****/
+* {
+    box-sizing: border-box;
+}
+
+/* Two-column layout with flex, no float/clearfix needed */
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Column_1 {
+    flex: 1 1 50%;
+    padding: 1.6%;
+    height: 450px;
+    background-color: #f2f2f2;
+}
+
+.Column_2 {
+    flex: 1 1 50%;
+    padding: 1.6%;
+    height: 450px;
+    background-color: #4d4d4d;
+}
+
+/***** End of Row / Column Styling *****/
+
+/***** Contact Form Styling *****/
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid black;
+    cursor: pointer;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+.form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+.form-container {
+    width: 49vw;
+    max-width: 400px;
+    min-width: 280px;
+    padding: 1vw;
+    background-color: white;
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0;
+    border: none;
+    background: Gainsboro;
+    font-size: 1vw;
+}
+
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: black;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: silver;
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+.form-container .cancel:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+
+/***** End of Contact Form Styling *****/
+
+
+/***** KeyFrames *****/
+/* Slide contact button in from the right on load */
+@keyframes movePopup {
+    from {
+        right: -40vw;
+    }
+    to {
+        right: 1.75vw;
+    }
+}
+
+@-webkit-keyframes movePopup {
+    from {
+        right: -40vw;
+    }
+    to {
+        right: 1.75vw;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide overlay text up on load */
+@keyframes moveVideoText {
+    from {
+        top: -100vw;
+    }
+    to {
+        top: 0vw;
+    }
+}
+
+/* Drop nav links in from the top on load */
+@keyframes moveNavText {
+    from {
+        top: -100vw;
+    }
+    to {
+        top: 0vw;
+    }
+}
+
+/* Slide navbar in from the left on load */
+@keyframes moveNav {
+    from {
+        left: -100vw;
+    }
+    to {
+        left: 0vw;
+    }
+}
+
+/***** Media Query Section *****/
+
+/* Scale paragraph text across breakpoints */
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3.75vw;
+    }
+
+    #Typing_Video {
+        bottom: auto;
+    }
+
+    .Video_Text {
+        height: 50vh;
+    }
+
+    .Navbar a {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Column_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Column_2 img {
+        width: 450px;
+        height: 450px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3.5vw;
+    }
+}
+
+/* Hide background video on small screens */
+@media screen and (max-width: 576px) {
+    #Typing_Video {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.75vw;
+    }
+
+    #Typing_Video {
+        bottom: auto;
+    }
+
+    .Video_Text {
+        height: 50vh;
+    }
+
+    .Navbar a {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Column_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Column_2 img {
+        width: 450px;
+        height: 450px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.5vw;
+    }
+
+    #Typing_Video {
+        bottom: auto;
+    }
+
+    .Video_Text {
+        height: 50vh;
+    }
+
+    .Navbar a {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Column_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Column_2 img {
+        width: 450px;
+        height: 450px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.75vw;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1.35vw;
+    }
+}
+
+/* Stack navbar links evenly on smaller screens */
+@media screen and (max-width: 1080px) {
+    .Navbar a {
+        width: 20%;
+        font-size: 2.5vw;
+    }
+
+    .quote {
+        font-size: 3.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Stack the two-column section on narrow screens */
+@media screen and (max-width: 700px) {
+    .Column_1,
+    .Column_2 {
+        flex: 1 1 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1725px) {
+    .Column_1,
+    .Column_2 {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    h1 {
+        margin-top: 0;
+    }
+}
+
+/***** End of Media Query Section *****/
